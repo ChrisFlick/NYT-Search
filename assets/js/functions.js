@@ -1,8 +1,8 @@
-getArticles("deadmau5", "", "");
+getArticles("", "20070101", "20081228");
 
 function getArticles (terms, startYear, endYear){
 
-    let queryURL = `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${terms}?end_date=${endYear}?begin_date=${startYear}&api-key=${APIKey}`;
+    let queryURL = `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${terms}&begin_date=${startYear}&end_date=${endYear}&api-key=${APIKey}`;
 
     $.ajax({
         url: queryURL,
