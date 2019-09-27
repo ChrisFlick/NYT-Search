@@ -5,68 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <title>New York Times Search</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title> New York Times Search</title>
 </head>
 
 <body>
-    <header class="jumbotron text-center">
-        <h1 class="display-3">New York Times Search</h1>
-         <p id="currentDay" class="lead"></p>
+    <header class="jumbotron bg-primary text-center">
+        <h1 class="display-3"> <i class="far fa-newspaper"></i>New York Times Search</h1>
+        <p id="currentDay" class="lead"></p>
     </header>
     <hr>
     <h1></h1>
-    <div class="card">
+    <div class="card container">
+        <div class="card-header">
+            Search Parameters
+        </div>
+        <div class="form-group">
+            <!-- search term input -->
+            <label>Search Term</label>
+            <input type="text" class="form-control" id="search-term">
+        </div>
+        <!-- record number to retrieve -->
+        <div class="form-group">
+            <label>Number of Records to Retrieve:</label>
+            <select class="form-control" id="result-number">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+        </div>
+        <!-- start year input  -->
+        <div class="form-group">
+            <label for="inputAddress">Start Year (Optional):</label>
+            <input type="text" class="form-control" id="start-year">
+        </div>
+        <!-- end year input -->
+        <div class="form-group">
+            <label for="inputAddress">End Year (Optional)</label>
+            <input type="text" class="form-control" id="end-year"> 
+        </div>   
+        <!-- search and clear row -->
+        <div class="row d-inline search">
+        <button class="d-inline" id="search-button" ><i class="fas fa-search"></i>Search</button>
+        <button class="d-inline" id="clear-button"><i class="fas fa-trash-alt"></i>Clear</button>
+         </div>
+       
+       <hr>
+        <!-- article search results -->
+        <div class="card">
             <div class="card-header">
-              Search Parameters
+                Top Articles
             </div>
-            <div class="form-group">
-                <!-- search term input -->
-                    <label>Search Term</label>
-                    <input type="text" class="form-control" id="search-term">
-                  </div>
-                  <!-- record number to retrieve -->
-                  <div class="form-group">
-                        <label>Number of Records to Retrieve:</label>
-                        <select class="form-control" id="result-number">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
-                          <option>6</option>
-                          <option>7</option>
-                          <option>8</option>
-                          <option>9</option>
-                          <option>10</option>
-                        </select>
-                      </div>
-                      <!-- start year input  -->
-                      <div class="form-group">
-                            <label for="inputAddress">Start Year (Optional):</label>
-                            <input type="text" class="form-control" id="start-year">
-                          </div>
-                          <!-- end year input -->
-                          <div class="form-group">
-                                <label for="inputAddress">End Year (Optional)</label>
-                                <input type="text" class="form-control" id="end-year" >
-                              </div>
-                             <button id="search-button">Search</button>
-                             <button id="clear-button">Clear</button>
-                             
-                              <!-- article search results -->
-                              <div class="card">
-                                    <div class="card-header">
-                                            Top Articles
-                                          </div>
-                                          <div id="search-results"></div>
-                                  
-                              </div>
+            <div id="search-results"></div>
 
-                          
-                    </div>
+        </div>
+
+
+    </div>
 
     
+<script src="../assets/js/variables.js"></script>
+<script src="../assets/js/functions.js"></script>
+<script src="../assets/js/main.js"></script>
+
 </body>
 
 </html>
