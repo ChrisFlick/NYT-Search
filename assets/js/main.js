@@ -1,6 +1,6 @@
 $(document).ready( function() {
   $('#search-button').on('click', function() {
-    let articles = getArticles($('#search-terms').val(), $('#start-year').val(), $('#end-year').val())
+    let articles = getArticles($('#search-term').val(), $('#start-year').val(), $('#end-year').val())
     let resultNum = $('#result-number').val()
 
     articles.then(function(response) {
