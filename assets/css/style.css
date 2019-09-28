@@ -1,6 +1,13 @@
-#container{
-    margin: 10px;
+
+body{ 
+    max-width: 960px;
+    margin: auto;
 }
+
+/* #container{
+    margin: 10px;
+} */
+
 #search{
     margin: 5px;
 }
